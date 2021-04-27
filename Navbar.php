@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
 
     <link href="vendor/twbs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
 
     <title>Mysite</title>
 </head>
@@ -38,10 +37,8 @@
 </header>
 
 
-<main class="flex-lg-shrink-0">
-    <div class="container">
-        <h1>Home page!</h1>
-    </div>
+<main class="flex-shrink-0">
+
 </main>
 
 <footer class="footer mt-auto py-3 fixed-bottom bg-dark">
