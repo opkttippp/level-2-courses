@@ -1,4 +1,4 @@
-<!doctype html>
+<?php echo '<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,4 +49,4 @@
 
 <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>';
