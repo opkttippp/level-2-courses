@@ -7,7 +7,7 @@
 
             <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
-                    <img src="images/1.jpg" alt="Admin" class="rounded-circle" width="150">
+                    <img src="/images/1.jpg" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                         <h4>John Doe</h4>
                     </div>
@@ -42,4 +42,3 @@
         </div>
     </div>
 </main>
-
