@@ -3,16 +3,13 @@
 namespace app\model;
 
 use app\core\Model;
-use PDO;
+use app\lib\Db;
 
 class News extends Model
 {
     public function getNews()
     {
-        $conn = new PDO('mysql:host=localhost;dbname=BASE', 'tttolll', 'tttolll');
-
-        $sql = "SELECT * FROM article";
-        $result = $conn->query($sql);
-        return $result->fetchAll(PDO::FETCH_ASSOC);
+        $db = new Db();
+        return $db -> queryyy('SELECT * FROM article');
     }
 }
