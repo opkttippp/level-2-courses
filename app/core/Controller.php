@@ -10,7 +10,6 @@ abstract class Controller
     public function __construct($param)
     {
         $this -> param = $param;
-//        $this -> model = $this -> loadModel($param['controller']);
         $this -> model = $this -> loadModel($param['controller']);
         $this -> view = new View($param);
     }

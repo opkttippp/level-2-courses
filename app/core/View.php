@@ -31,9 +31,4 @@ class View
         require 'app/views/errors/'.$code.'.php';
         exit();
     }
-    public function redirect($url)
-    {
-        header('Location:'.$url);
-        exit();
-    }
 }

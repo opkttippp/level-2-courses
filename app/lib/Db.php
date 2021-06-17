@@ -6,7 +6,7 @@ use PDO;
 
 class Db
 {
-    protected $db;
+    public PDO $db;
 
     public function __construct()
     {
@@ -16,10 +16,5 @@ class Db
             $config['user'],
             $config['password']
         );
-    }
-    public function queryyy($sql)
-    {
-        $query = $this->db->query($sql);
-        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 }

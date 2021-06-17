@@ -39,10 +39,10 @@ class Router
                     $controller = new $path($this -> param);
                     $controller -> $action();
                 } else {
-                    View::errorCode(404);
+                    View::errorCode(' Метод не существует ');
                 }
             } else {
-                View::errorCode(404);
+                View::errorCode(' Класс Метод не существует');
             }
         } else {
             View::errorCode(404);
