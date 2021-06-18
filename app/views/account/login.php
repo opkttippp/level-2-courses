@@ -13,10 +13,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <h2><?php if (isset($data['error'])) {
-                    echo $data['error'];
-                }
-                ?></h2>
         </div>
     </div>
 </main>

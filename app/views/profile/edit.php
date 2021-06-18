@@ -7,35 +7,43 @@
 
             <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
-                    <img src="/images/1.jpg" alt="Admin" class="rounded-circle" width="150">
+                    <img src="<?php echo $data['img'];?>" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                        <h4>John Doe</h4>
                     </div>
                 </div>
             </div>
         </div>
+        <form action="/profile/images" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="file" name="attachment" value="Сhoose a picture ">
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Save a picture">
+            </div>
+        </form>
         <div class="main-body">
-            <form>
+            <form action="/profile/new" method="post" >
                 <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <label for="Name"></label><input type="text" class="form-control" id="Name" placeholder="John">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="<?php echo $data['name'];?>" size="100">
 
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Surname</label>
-                    <label for="Surname"></label><input type="text" class="form-control" id="Surname" placeholder="Doe">
+                    <label class="form-label" for="surname">Surname</label>
+                    <input type="text" class="form-control" name="surname" placeholder="<?php echo $data['surname'];?>">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Login</label>
-                    <label for="Login"></label><input type="text" class="form-control" id="Login">
+                    <label class="form-label" for="login">Login</label>
+                    <input type="text" class="form-control" name="login" placeholder="<?php echo $data['login'];?>">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <label for="Password"></label><input type="password" class="form-control" id="Password">
+                    <label class="form-label" for="pass">Password</label>
+
+                    <input type="password" class="form-control" name="pass" placeholder="<?php echo $data['pass'];?>">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">email</label>
-                    <label for="email"></label><input type="email" class="form-control" id="email">
+                    <label class="form-label" for="email">email</label>
+                    <input type="email" class="form-control" name="email" placeholder="<?php echo $data['email'];?>">
                 </div>
                 <button type="submit" class="btn btn-primary">Save</button>
             </form>

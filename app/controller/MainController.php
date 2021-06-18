@@ -8,10 +8,7 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        $vars = [
-            'name' => 'Vasa',
-            'age' => '30'
-        ];
-        $this->view->render('hello!!',$vars);
+        $data = $this->model->getData();
+        $this->view->render('hello!!', $data);
     }
 }

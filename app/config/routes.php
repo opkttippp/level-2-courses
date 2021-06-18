@@ -24,4 +24,12 @@ return[
         'controller' => 'profile',
         'action' => 'edit',
     ],
+    'profile/new' => [
+        'controller' => 'profile',
+        'action' => 'new',
+    ],
+    'profile/images' => [
+        'controller' => 'profile',
+        'action' => 'images',
+    ],
 ];

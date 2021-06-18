@@ -10,7 +10,6 @@
 </head>
 <body>
 <?php
-session_start();
 include_once('Blocks/header.php');
 echo $content;
 include_once('Blocks/footer.php');
