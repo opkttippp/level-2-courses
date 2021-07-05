@@ -17,6 +17,7 @@
         "tree/nanov": ">=v0.1.0",
         "swiftmailer/swiftmailer": "^6.0",
         "components/jquery": "^3.5",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "curl/curl": "*"
     }
 }

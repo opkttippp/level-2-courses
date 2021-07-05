@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 use app\core\Router;
@@ -11,4 +12,4 @@ spl_autoload_register(function ($class) {
     }
 });
 $s = new Router();
-$s ->run();
+$s->run();

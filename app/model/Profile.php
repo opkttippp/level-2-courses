@@ -21,7 +21,8 @@ class Profile
     public function setUser($id, $name, $surname, $login, $pass, $email)
     {
         $db = new Db();
-        $sql = "UPDATE profile SET name = :name, surname = :surname, login = :login, pass = :pass, email = :email WHERE id = :id";
+        $sql = "UPDATE profile SET name = :name, surname = :surname, login = :login, pass = :pass,
+                   email = :email WHERE id = :id";
         $stat = $db->db->prepare($sql);
         $stat->bindValue(":id", $id);
         $stat->bindValue(":name", $name);
@@ -44,5 +45,15 @@ class Profile
         if ($stat->execute()) {
             header("Location:/profile/edit");
         }
+    }
+
+    public function delImage($id)
+    {
+        $db = new Db();
+        $sql = ("SELECT img FROM profile WHERE id = :id");
+        $stat = $db->db->prepare($sql);
+        $stat->bindValue(":id", $id);
+        $stat->execute();
+        return $stat->fetch(PDO::FETCH_ASSOC);
     }
 }

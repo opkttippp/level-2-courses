@@ -8,7 +8,6 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        $data = $this->model->getData();
-        $this->view->render('hello!!', $data);
+        $this->view->render('hello!!');
     }
 }

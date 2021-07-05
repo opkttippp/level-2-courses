@@ -1,4 +1,5 @@
 <?php
+
 namespace app\controller;
 
 use app\core\Controller;
@@ -32,6 +33,7 @@ class AccountController extends Controller
         }
         $this->view->render('Reg');
     }
+
     public function logoutAction()
     {
         unset($_SESSION["id"]);

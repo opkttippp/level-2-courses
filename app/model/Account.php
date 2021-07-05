@@ -13,18 +13,19 @@ class Account
     public $pass;
     public $email;
 
-    public function log($login,$pass)
+    public function log($login, $pass)
     {
         $db = new Db();
 
-            $sql = "SELECT * FROM profile WHERE login = :login AND pass = :pass";
-            $stat = $db->db->prepare($sql);
-            $stat->bindValue(":login", $login);
-            $stat->bindValue(":pass", $pass);
-            if ($stat->execute()) {
-                return $stat->fetch(PDO::FETCH_ASSOC);
-            } else
-                return false;
+        $sql = "SELECT * FROM profile WHERE login = :login AND pass = :pass";
+        $stat = $db->db->prepare($sql);
+        $stat->bindValue(":login", $login);
+        $stat->bindValue(":pass", $pass);
+        if ($stat->execute()) {
+            return $stat->fetch(PDO::FETCH_ASSOC);
+        } else {
+            return false;
+        }
     }
 
     public function reg(): bool

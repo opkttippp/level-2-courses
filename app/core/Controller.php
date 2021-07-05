@@ -13,13 +13,13 @@ abstract class Controller
         $this->model = $this->loadModel($param['controller']);
         $this->view = new View($param);
     }
+
     public function loadModel($name)
     {
-
         $path = 'app\model\\' . ucfirst($name);
         if (class_exists($path)) {
             return new $path;
         }
-        View::errorCode(404);
+        return false;
     }
 }
